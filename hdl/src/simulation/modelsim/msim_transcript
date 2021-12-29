@@ -1,0 +1,78 @@
+# Reading pref.tcl
+# do BCDtoSSeg_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src {C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src/BCDtoSSeg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 03:23:18 on Dec 29,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src" C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src/BCDtoSSeg.v 
+# -- Compiling module BCDtoSSeg
+# 
+# Top level modules:
+# 	BCDtoSSeg
+# End time: 03:23:18 on Dec 29,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src {C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src/BCD2SSeg_TB.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 03:23:18 on Dec 29,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src" C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src/BCD2SSeg_TB.v 
+# -- Compiling module BCDtoSSeg_TB
+# 
+# Top level modules:
+# 	BCDtoSSeg_TB
+# End time: 03:23:19 on Dec 29,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  BCDtoSSeg_TB
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" BCDtoSSeg_TB 
+# Start time: 03:23:19 on Dec 29,2021
+# Loading work.BCDtoSSeg_TB
+# Loading work.BCDtoSSeg
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /BCDtoSSeg_TB/uut File: C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src/BCD2SSeg_TB.v Line: 13
+# ** Warning: (vsim-3722) C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src/BCD2SSeg_TB.v(13): [TFMPC] - Missing connection for port 'an'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 600 ns
+# ** Note: $finish    : C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src/BCD2SSeg_TB.v(35)
+#    Time: 200 ns  Iteration: 0  Instance: /BCDtoSSeg_TB
+# 1
+# Break in NamedBeginStat TEST_CASE at C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src/BCD2SSeg_TB.v line 35
+add wave -position insertpoint sim:/BCDtoSSeg_TB/TEST_CASE/*
+# ** UI-Msg: (vish-4014) No objects found matching '/BCDtoSSeg_TB/TEST_CASE/*'.
+restart
+# Closing VCD file "BCDtoSSeg_TB.v"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /BCDtoSSeg_TB/uut File: C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src/BCD2SSeg_TB.v Line: 13
+# ** Warning: (vsim-3722) C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src/BCD2SSeg_TB.v(13): [TFMPC] - Missing connection for port 'an'.
+run
+run
+# ** Note: $finish    : C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src/BCD2SSeg_TB.v(35)
+#    Time: 200 ns  Iteration: 0  Instance: /BCDtoSSeg_TB
+# 1
+# Break in NamedBeginStat TEST_CASE at C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src/BCD2SSeg_TB.v line 35
+add wave -position insertpoint  \
+sim:/BCDtoSSeg_TB/BCD \
+sim:/BCDtoSSeg_TB/SSeg
+add wave -position insertpoint sim:/BCDtoSSeg_TB/*
+restart
+# Closing VCD file "BCDtoSSeg_TB.v"
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /BCDtoSSeg_TB/uut File: C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src/BCD2SSeg_TB.v Line: 13
+# ** Warning: (vsim-3722) C:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src/BCD2SSeg_TB.v(13): [TFMPC] - Missing connection for port 'an'.
+run

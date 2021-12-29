@@ -1,0 +1,36 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Roberto/Documents/GitHub/lab02-2021-2-grupo09-2021-2-/hdl/src/simulation/modelsim
+vBCDtoSSeg
+!s110 1640689926
+!i10b 1
+!s100 Lc`Z7:l02^ZzI_j>Z@D=T2
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+IEba_c6gJ?GfzgAL5aTT^P2
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1640689811
+8BCDtoSSeg.vo
+FBCDtoSSeg.vo
+!i122 0
+L0 32 469
+OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1640689926.000000
+!s107 BCDtoSSeg.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|BCDtoSSeg.vo|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+.
+tCvgOpt 0
+n@b@c@dto@s@seg
