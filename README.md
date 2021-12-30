@@ -7,7 +7,7 @@ laboratorio 02 simulación
 
 El siguiente documento tiene como fin exponer los conocimientos acerca del diseno de hardware atravez del lenguaje verilog, por consiguiente la siguiente es una reproduccion de la implementacion de un modulo que tiene entradas BCD  y convierto por asi decirlo en bit aptos para 7segmentos, la metodologia consiste en explicar un codigo proporcionado y siguiente a eso realizar las respectivas simulaciones.
 
-##comprension del codigo HDL  BCDtoSeg
+#comprension del codigo HDL
 
 ```
 module BCDtoSSeg (BCD, SSeg, an);   // asignacion del modulo con 3 parametros
@@ -50,7 +50,12 @@ end
 endmodule
 
 ```
+A continuacion la simulacion del archivo Techbench
 
-##Modulo BCDtoSeg
+![Simulacion BCDtoSSeg](https://github.com/unal-edigital1-lab/lab02-2021-2-grupo09-2021-2-/blob/master/imag/simulacion_archivos_dhl.PNG)
+
+Ahora procedemos a crear un archivo nuevo HDL pero esta vez con vizualizacion dinamica, para esta tarea vamos a implementar 3 modulos con tareas muy especificas, el primero un modulos que convierta de binario a BCD y otro que convierta de BCD a Sseg, y un tercer modulo que haga la tera de multiplexor para que maneje los canales de los display 7segmentos.
+
+El siguiente es el modulo 
 
 
