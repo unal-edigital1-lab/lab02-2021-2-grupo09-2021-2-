@@ -50,12 +50,49 @@ end
 endmodule
 
 ```
+
+
+El siguiente es el archivo TB
+```
+`timescale 1ns / 1ps   //escala de tiempo en 1 pico segundo
+
+module BCDtoSSeg_TB; //Declaracion del modulo
+	// Inputs
+	reg [3:0] BCD; //entrada BCD 4 bits
+	// Outputs
+	wire [6:0] SSeg; // salida 7 segmentos 7 bits
+
+	//inicia la caja uut con los rastreadores de tiempo
+	BCDtoSSeg uut (
+	//aplica el tiempo en las terminales del modulo  BCDtoSSeg_TB
+		.BCD(BCD), 
+		.SSeg(SSeg)
+	);
+
+	initial begin
+		// asigna 10 picosegundos a cada prueba bcd
+		BCD = 0; #10;
+		BCD = 1; #10;
+		BCD = 2; #10;
+		BCD = 3; #10;
+		BCD = 4; #10;
+		BCD = 5; #10;
+		BCD = 6; #10;
+		BCD = 7; #10;
+		BCD = 8; #10;
+		BCD = 9; #10;
+
+	end
+
+   initial begin: TEST_CASE
+     $dumpfile("BCDtoSSeg_TB.vcd");
+     #(200) $finish;
+   end
+
+endmodule
+
+```
 A continuacion la simulacion del archivo Techbench
 
 ![Simulacion BCDtoSSeg](https://github.com/unal-edigital1-lab/lab02-2021-2-grupo09-2021-2-/blob/master/imag/simulacion_archivos_dhl.PNG)
-
-Ahora procedemos a crear un archivo nuevo HDL pero esta vez con vizualizacion dinamica, para esta tarea vamos a implementar 3 modulos con tareas muy especificas, el primero un modulos que convierta de binario a BCD y otro que convierta de BCD a Sseg, y un tercer modulo que haga la tera de multiplexor para que maneje los canales de los display 7segmentos.
-
-El siguiente es el modulo 
-
 
